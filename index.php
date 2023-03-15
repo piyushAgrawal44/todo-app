@@ -55,10 +55,9 @@ switch ($action) {
                 if ($data['success']) {
                     $_SESSION["loggedin"]=true;
                     $_SESSION["user_id"]=$data["row_id"];
-                    $_SESSION["user_name"]=$data["name"];
-                    $_SESSION["user_email"]=$data["email"];
+                    $_SESSION["user_name"]=$name;
+                    $_SESSION["user_email"]=$email;
                     echo "<script>
-                    alert('Successfully Account Created !');
                     window.location.href='index.php';
                     </script>";
                 } else {
